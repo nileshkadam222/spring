@@ -1,0 +1,30 @@
+package com.myapp;
+
+public class CricketCoach implements Coach {
+
+	private FortuneService FortuneService;
+	
+	private String emailAddress emailaddress;
+	
+	private String team teams;
+
+	public CricketCoach() {
+		System.out.println("Cricket Coach Constructor Loaded");
+	}
+
+	public void setFortuneService(FortuneService theFortuneService) {
+		System.out.println("Cricket Coach setter mmethod");
+		this.FortuneService = theFortuneService;
+	}
+
+	@Override
+	public String getDailyWorkout() {
+		return "Practies Fast Balling";
+	}
+
+	@Override
+	public String getDailyFortune() {
+		return FortuneService.getFortune();
+	}
+
+}

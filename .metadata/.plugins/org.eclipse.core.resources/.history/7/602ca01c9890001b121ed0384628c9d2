@@ -1,0 +1,6 @@
+package com.myapp;
+
+public class MyLoggerConfig {
+	private String rootLoggerLevel;
+	private String printedLoggerLevel;
+}

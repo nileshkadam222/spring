@@ -1,0 +1,9 @@
+package com.myapp;
+
+public class HelloSpringApp {
+
+	public static void main(String[] args) {
+
+	}
+
+}
