@@ -1,7 +1,0 @@
-
-k	java:S106""9Replace this use of System.out or System.err by a logger.(¬¸ô 8Í­‰ˆ/H¿RMAJORZ
-CODE_SMELL
-p	java:S106"9Replace this use of System.out or System.err by a logger.(—ÿó”ûÿÿÿÿ8¶È³‰ˆ/H¾RMAJORZ
-CODE_SMELL
-‹	java:S116"YRename this field "FortuneService" to match the regular expression '^[a-z][a-zA-Z0-9]*$'.(œ“›ò8õÃ§‰ˆ/HÀRMINORZ
-CODE_SMELL

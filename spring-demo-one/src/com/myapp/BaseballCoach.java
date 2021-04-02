@@ -16,5 +16,13 @@ public class BaseballCoach implements Coach {
 	public String getDailyFortune() {
 		return fortuneService.getFortune();
 	}
+	
+	public void initBean() {
+		System.out.println("bean init method called");
+	}
+	
+	public void destoryBean() {
+		System.out.println("bean destory method called");
+	}
 
 }
