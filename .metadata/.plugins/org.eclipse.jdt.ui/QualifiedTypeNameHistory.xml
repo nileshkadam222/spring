@@ -10,7 +10,6 @@
     <fullyQualifiedTypeName name="com.myapp.parentM"/>
     <fullyQualifiedTypeName name="com.myapp.ChildM"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Value"/>
-    <fullyQualifiedTypeName name="com.myApp.FortuneService"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Autowired"/>
     <fullyQualifiedTypeName name="org.springframework.beans.factory.annotation.Qualifier"/>
     <fullyQualifiedTypeName name="org.springframework.stereotype.Component"/>
@@ -24,5 +23,10 @@
     <fullyQualifiedTypeName name="org.springframework.context.annotation.ComponentScan"/>
     <fullyQualifiedTypeName name="com.myApp.AnnoationBasedConfiguration"/>
     <fullyQualifiedTypeName name="org.springframework.context.annotation.AnnotationConfigApplicationContext"/>
+    <fullyQualifiedTypeName name="org.springframework.context.annotation.Bean"/>
+    <fullyQualifiedTypeName name="com.myApp.FortuneService"/>
+    <fullyQualifiedTypeName name="com.myApp.SadFortuneService"/>
+    <fullyQualifiedTypeName name="com.myApp.SwmiCoach"/>
+    <fullyQualifiedTypeName name="com.myApp.TennisCoach"/>
     <fullyQualifiedTypeName name="com.myApp.SportConfiguration"/>
 </qualifiedTypeNameHistroy>
