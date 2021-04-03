@@ -5,20 +5,15 @@ import org.springframework.beans.factory.annotation.Qualifier;
 import org.springframework.stereotype.Component;
 
 @Component
-public class FootballCoach implements Coach {
+public class CrecketCoach implements Coach {
 
-	private FortuneService fortuneService;
-	
 	@Autowired
-	@Qualifier("randomFortuneService")
-	public void setFortuneService(FortuneService theFortuneService) {
-		System.out.println("Injecting Object Using Setter Method :"+getClass());
-		this.fortuneService = theFortuneService;
-	}
+	@Qualifier("datbaseFortuneService")
+	private FortuneService fortuneService;
 	
 	@Override
 	public String getDailyWorkout() {
-		return "Hit the ball";
+		return "Yes 200 Runs";
 	}
 
 	@Override
