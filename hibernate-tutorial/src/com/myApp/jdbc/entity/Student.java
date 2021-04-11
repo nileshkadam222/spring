@@ -1,11 +1,17 @@
 package com.myApp.jdbc.entity;
 
+import java.util.Date;
+
 import javax.persistence.Column;
 import javax.persistence.Entity;
 import javax.persistence.GeneratedValue;
 import javax.persistence.GenerationType;
 import javax.persistence.Id;
 import javax.persistence.Table;
+import javax.persistence.Temporal;
+import javax.persistence.TemporalType;
+
+import com.myApp.jdbc.utill.DateUtils;
 
 @Entity
 @Table(name = "student")
@@ -23,15 +29,20 @@ public class Student {
 
 	@Column(name = "email")
 	private String email;
+	
+	@Column(name="date_of_birth")
+    @Temporal(TemporalType.DATE)    
+    private Date dateOfBirth;
 
 	public Student() {
 	}
 
-	public Student(String firstName, String lastName, String email) {
+	public Student(String firstName, String lastName, String email,Date theDateOfBirth) {
 		super();
 		this.firstName = firstName;
 		this.lastName = lastName;
 		this.email = email;
+		this.dateOfBirth = theDateOfBirth;
 	}
 
 	public int getId() {
@@ -65,11 +76,23 @@ public class Student {
 	public void setEmail(String email) {
 		this.email = email;
 	}
+	
+	
+
+	public Date getDateOfBirth() {
+		return dateOfBirth;
+	}
+
+	public void setDateOfBirth(Date dateOfBirth) {
+		this.dateOfBirth = dateOfBirth;
+	}
 
 	@Override
 	public String toString() {
-		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email + "]";
+		return "Student [id=" + id + ", firstName=" + firstName + ", lastName=" + lastName + ", email=" + email
+				+ ", dateOfBirth=" + DateUtils.formatDate(dateOfBirth) + "]";
 	}
 
+	
 	
 }

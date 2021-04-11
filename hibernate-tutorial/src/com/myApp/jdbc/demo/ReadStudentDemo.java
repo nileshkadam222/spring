@@ -5,6 +5,7 @@ import org.hibernate.SessionFactory;
 import org.hibernate.cfg.Configuration;
 
 import com.myApp.jdbc.entity.Student;
+import com.myApp.jdbc.utill.DateUtils;
 
 public class ReadStudentDemo {
 
@@ -22,7 +23,8 @@ public class ReadStudentDemo {
 		try {
 			//Creating new Studen object
 			System.out.println("Creating student Object");
-			Student s = new Student("Pooja","Parab","pooja12@gmail.com");
+			String theDateOfBirthStr = "31/12/1998";
+			Student s = new Student("Pooja","Parab","pooja12@gmail.com",DateUtils.parseDate(theDateOfBirthStr));
 			
 			//start the transation
 			currentSession.beginTransaction();
