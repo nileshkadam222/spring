@@ -2,4 +2,23 @@
 <libraryInfos>
     <libraryInfo home="F:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507" version="15.0.1"/>
     <libraryInfo home="F:\eclipse\plugins\org.eclipse.justj.openjdk.hotspot.jre.full.win32.x86_64_15.0.1.v20201027-0507\jre" version="15.0.1"/>
+    <libraryInfo home="F:\JDK" version="1.8.0_271">
+        <bootpath>
+            <entry path="F:\JDK\jre\lib\resources.jar"/>
+            <entry path="F:\JDK\jre\lib\rt.jar"/>
+            <entry path="F:\JDK\jre\lib\sunrsasign.jar"/>
+            <entry path="F:\JDK\jre\lib\jsse.jar"/>
+            <entry path="F:\JDK\jre\lib\jce.jar"/>
+            <entry path="F:\JDK\jre\lib\charsets.jar"/>
+            <entry path="F:\JDK\jre\lib\jfr.jar"/>
+            <entry path="F:\JDK\jre\classes"/>
+        </bootpath>
+        <extensionDirs>
+            <entry path="F:\JDK\jre\lib\ext"/>
+            <entry path="C:\WINDOWS\Sun\Java\lib\ext"/>
+        </extensionDirs>
+        <endorsedDirs>
+            <entry path="F:\JDK\jre\lib\endorsed"/>
+        </endorsedDirs>
+    </libraryInfo>
 </libraryInfos>
