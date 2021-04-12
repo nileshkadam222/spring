@@ -21,9 +21,9 @@ public class CreateDemo {
 		Session session = factory.getCurrentSession();
 		session.beginTransaction();
 		
-		Instructor instructor = new Instructor("Nilesh","Kadam","nilesh@gmail.com");
+		Instructor instructor = new Instructor("Yogesh","Kadam","yogesh@gmail.com");
 		
-		InstructorDetail instructorDetail = new InstructorDetail("Hoffnugtech", "Study");
+		InstructorDetail instructorDetail = new InstructorDetail("Abc", "Sleeping");
 		
 		instructor.setInstructorDetail(instructorDetail);
 		
