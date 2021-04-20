@@ -22,7 +22,39 @@ public class CustomerDaoImpl implements CustomerDao {
 	@Override
 	public List<Customer> getCustomers() {
 		Session currentSession = sessionFactory.getCurrentSession();
-		Query<Customer> createQuery = currentSession.createQuery("from customer", Customer.class);
+		Query<Customer> createQuery = currentSession.createQuery("from Customer order by lastName", Customer.class);
+		return createQuery.getResultList();
+	}
+
+	@Override
+	@Transactional
+	public void saveCustomer(Customer theCustomer) {
+		Session currentSession = sessionFactory.getCurrentSession();
+		currentSession.saveOrUpdate(theCustomer);
+	}
+
+	@Override
+	@Transactional
+	public Customer getCustomer(int theId) {
+		Session currentSession = sessionFactory.getCurrentSession();
+		return currentSession.get(Customer.class, theId);
+	}
+
+	@Override
+	@Transactional
+	public void deleteCustomer(int theId) {
+		Session currentSession = sessionFactory.getCurrentSession();
+		Query createQuery = currentSession.createQuery("delete from Customer where id =:theCustomerId");
+		createQuery.setParameter("theCustomerId", theId);
+		createQuery.executeUpdate();
+	}
+
+	@Override
+	@Transactional
+	public List<Customer> searchCustomer(String search) {
+		Session currentSession = sessionFactory.getCurrentSession();
+		Query<Customer> createQuery = currentSession.createQuery("from Customer where lower(firstName) like :theName or lower(lastName) like :theName",Customer.class);
+		createQuery.setParameter("theName", "%"+search.toLowerCase()+"%");
 		return createQuery.getResultList();
 	}
 }
