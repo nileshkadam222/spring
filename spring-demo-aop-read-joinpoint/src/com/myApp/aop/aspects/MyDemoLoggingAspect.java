@@ -14,10 +14,11 @@ import org.springframework.stereotype.Component;
 @Aspect
 public class MyDemoLoggingAspect {
 	@Pointcut("execution(* add*(..))")
-	private void getPointCutDecl() {}
-	
-	//@Before("execution(public void addAccount())")
-	//@Before("execution(public void updateAccount())")
+	private void getPointCutDecl() {
+	}
+
+	// @Before("execution(public void addAccount())")
+	// @Before("execution(public void updateAccount())")
 	@Before("getPointCutDecl()")
 	public void beforeAddAccountAdvice(JoinPoint theJoinPoint) {
 		MethodSignature sig = (MethodSignature) theJoinPoint.getSignature();
@@ -25,13 +26,10 @@ public class MyDemoLoggingAspect {
 		System.out.println("============================================================= ");
 		System.out.println("======>>  Executimg @Before Advice");
 		Arrays.stream(args).forEach(System.out::println);
-		System.out.println("======>> "+sig);
+		System.out.println("======>> " + sig);
 		System.out.println("============================================================= ");
 		System.out.println();
 		System.out.println();
 		System.out.println();
-		
-		theJoinPoint.get
-		
 	}
 }
